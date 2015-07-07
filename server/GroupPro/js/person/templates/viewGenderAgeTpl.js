@@ -1,4 +1,5 @@
 viewGenderAgeTpl = [
+'<table class = "myTable">',
 '	<tr>',
 '		<td>',
 '			Возраст:',
@@ -15,4 +16,4 @@ viewGenderAgeTpl = [
 '			<%= gender %>',
 '		</td>',
 '	</tr>',
-].join('');
+'</table>'].join('');

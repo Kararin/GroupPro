@@ -1,4 +1,5 @@
 viewFullNameTpl = [
+'<table class = "myTable">',
 '	<tr>',
 '		<td>',
 '			Фалимия имя отчество:',
@@ -8,4 +9,5 @@ viewFullNameTpl = [
 '			<%= name %>',
 '			<%= secondName %>',
 '		</td>',
-'	</tr>'].join('');
+'	</tr>',
+'</table>'].join('');

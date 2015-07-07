@@ -1,6 +1,7 @@
 var TabView = Backbone.View.extend({
     template: _.template(tabTpl),
     view: new View(),
+    $viewEl: '',
 
     events: {
         'click #name': 'showFullName',
@@ -9,16 +10,21 @@ var TabView = Backbone.View.extend({
         'click #preview': 'showPreview'
     },
 
+
+    initViewEl: function ($el) {
+        this.$viewEl = $el;
+    },
+
     showFullName: function () {
-        this.$el.append(this.view.render('fullName').el);
+        this.$viewEl.append(this.view.render('fullName').el);
     },
 
     showAgeGender: function () {
-        this.$el.append(this.view.render('genderAge').el);
+        this.$viewEl.append(this.view.render('genderAge').el);
     },
     
     showPassport: function () {
-        this.$el.append(this.view.render('passportData').el);
+        this.$viewEl.append(this.view.render('passportData').el);
     },
     
     showPreview: function () {

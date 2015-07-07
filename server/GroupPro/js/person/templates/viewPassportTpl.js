@@ -1,4 +1,5 @@
 viewPassportTpl = [
+'<table class = "myTable">',
 '	<tr>',
 '		<td>',
 '			Паспортные данные:',
@@ -15,4 +16,4 @@ viewPassportTpl = [
 '			<%= idCode %>',
 '		</td>',
 '	</tr>',
-].join('');
+'</table>'].join('');

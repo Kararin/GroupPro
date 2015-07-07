@@ -1,6 +1,4 @@
 var View = Backbone.View.extend ({
-    tagName: 'table',
-    className: 'myTable',
 
     viewTemplates: {
         'fullName': viewFullNameTpl,
@@ -8,12 +6,17 @@ var View = Backbone.View.extend ({
         'passportData': viewPassportTpl
     },
 
+    initialize: function () {
+        this.$el.addClass('hidden');
+    },
+
     initPerson: function (person) {
         this.model = person;
     },
 
     render: function (personData) {
-        this.template = _.template(this.viewTemplates[personData]);
+        this.template = _.template(this.viewTemplates[personData]),
+        this.$el.toggleClass('hidden');
         this.$el.html(this.template(this.model.toJSON()));
         return this;
     }
