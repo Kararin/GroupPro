@@ -7,7 +7,6 @@ function Controller () {
         tabView = new TabView(),
         groupView = new GroupView(),
         preview = new Preview();
-
         
     this.start = function () {
         $elements['groupView'].append(groupView.render().el);

@@ -12,7 +12,6 @@ var GroupView = Backbone.View.extend({
         var studentView = new StudentView({model : student});
         this.$el.append(studentView.render().el);
     },
-
     render: function () {
         return this;
     }

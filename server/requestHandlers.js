@@ -4,10 +4,16 @@ var fs = require('fs'),
 function showPage (response, pathName, extName) {
     var fileName = pathName.slice(1, pathName.length),
         contentTypes = {
+<<<<<<< HEAD
             '.css': 'text/css',
             '.html': 'text/html',
             '.js': 'text/javascript',
             '.json': 'text'   
+=======
+            '.css' : 'text/css',
+            '.html' : 'text/html',
+            '.js' : 'text/javascript'   
+>>>>>>> 2886bc5307186ba074dea4fba5e92cd8de73f191
         };
 
     console.log('Request handler "showPage" was called.');
@@ -18,7 +24,11 @@ function showPage (response, pathName, extName) {
             response.write(error + "\n");
             response.end();
         } else {
+<<<<<<< HEAD
             response.writeHead(200, {'Content-Type': contentTypes[extName]});
+=======
+            response.writeHead(200, {'Content-Type' : contentTypes[extName]});
+>>>>>>> 2886bc5307186ba074dea4fba5e92cd8de73f191
             response.write(file);
         };
         response.end();
@@ -36,6 +46,7 @@ function sayHello (response) {
 };
 
 function getJSON (response) {
+<<<<<<< HEAD
     /*
     var fileName = '/students.json';
 
@@ -51,6 +62,8 @@ function getJSON (response) {
         response.end();
     });
     */
+=======
+>>>>>>> 2886bc5307186ba074dea4fba5e92cd8de73f191
     var students = [{
                 'lastName': 'Иванов',
                 'name': 'Алексей',
@@ -123,7 +136,10 @@ function getJSON (response) {
     response.writeHead(200, {'Content-Type' : 'application/json' });
     response.write(json);
     response.end();
+<<<<<<< HEAD
     
+=======
+>>>>>>> 2886bc5307186ba074dea4fba5e92cd8de73f191
 }
 
 exports.sayHello = sayHello;

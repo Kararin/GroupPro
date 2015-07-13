@@ -22,7 +22,6 @@ var TabView = Backbone.View.extend({
         });
         $chosenElement.removeClass('hidden');
    },
-
     initViewEl: function ($el) {
         this.$viewEl = $el;
     },
